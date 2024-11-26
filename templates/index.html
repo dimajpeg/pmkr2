@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Map - Odessa</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Карта -->
+    <div id="map-container"></div>
+
+   <!-- Плаваючі кнопки -->
+    <div class="floating-buttons">
+        <button id="search-button">🔍 Пошук</button>
+        <button id="filter-button">⚙️ Фільтри</button>
+    </div>
+
+    <!-- Панель пошуку -->
+    <div id="search-panel">
+        <input type="text" id="search-input" placeholder="Введіть адресу або точку">
+        <button onclick="performSearch()">🔍 Знайти</button>
+    </div>
+
+    <!-- Панель фільтрів -->
+    <div id="filter-panel">
+        <h3>Фільтри:</h3>
+        <label>
+            <input type="checkbox" id="congestion-filter" checked>
+            Показати затори
+        </label>
+        <label>
+            <input type="checkbox" id="alternate-routes-filter">
+            Альтернативні маршрути
+        </label>
+        <button onclick="applyFilters()">Застосувати</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
